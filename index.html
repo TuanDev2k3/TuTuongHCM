@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz App - Tư tưởng HCM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./Logo_3.jpg">
+    <!-- BoxIcon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Start Quiz -->
+    <div class="start-btn">
+        <button id="chuong-1">Chuong 1</button>
+        <button id="chuong-2">Chuong 2</button> 
+        <button id="chuong-3">Chuong 3</button>
+        <button id="chuong-4">Chuong 4</button>
+        <button id="chuong-5">Chuong 5</button> 
+        <button id="chuong-6">Chuong 6</button>
+        
+    </div>
+    <div class="info-box hide">
+        <div class="info-title">Welcome To Quiz For Me</div>
+        <div class="info-list">
+            <li class="info">1. Bạn có 30 giây để trả lời câu hỏi.</li>
+            <li class="info">2. Có tổng cộng 30 câu hỏi cần trả lời.</li>
+            <li class="info">3. Bạn không thể Exit sau khi nhấn Continue</li>
+            <li class="info">4. Bạn đã sẵn sàng cho thử thách chưa.</li>
+            <li class="info">5. Số điểm sẽ công bố sau khi bạn hoàn thành.</li>
+        </div>
+        <div class="buttons">
+            <button class="exit">Exit Quiz</button>
+            <button class="continue">Continue</button>
+        </div>
+    </div>
+
+    <!-- App Quiz -->
+    <div class="app hide sm:p-[30px] p-4">
+        <header>
+            <h1 class="sm:text-[35px] text-[28px] text-green-600 font-semibold">Quiz App</h1>
+            <div class="h-[30px]">
+                <input type="text" id="search" placeholder="Tìm câu" class="sm:w-[100px] w-[80px] outline-none border-none h-full sm:mr-2 mr-1 p-2">
+                <button class="w-[40px] h-full bg-purple-500 rounded-sm text-white sm:text-[14px] text-[12px]" id="btn-search">Tìm</button>
+            </div>
+        </header>
+        
+        <div class="quiz">
+            <h2 class="question sm:text-[18px] text-[17px]">Question here</h2>
+            <div class="answer-btn">
+                <button class="btn sm:p-[10px_15px] p-[8px_10px] sm:text-[17px] text-[15px]">Answer 1</button>
+                <button class="btn sm:p-[10px_15px] p-[8px_10px] sm:text-[17px] text-[15px]">Answer 2</button>
+                <button class="btn sm:p-[10px_15px] p-[8px_10px] sm:text-[17px] text-[15px]">Answer 3</button>
+                <button class="btn sm:p-[10px_15px] p-[8px_10px] sm:text-[17px] text-[15px]">Answer 4</button>
+            </div>
+
+            <div class="flex justify-between">
+                <button class="control-btn bg-red-500 active:bg-red-600" id="back-btn">Back</button>
+                <button class="control-btn bg-green-500 active:bg-green-600" id="next-btn">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result-box hide">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete-text">Chúc mừng bạn đã hoàn thành thử thách của tui !!!</div>
+        <div class="score">Bạn trả lời chính xác <span>5/5</span> câu hỏi..<br>Tuyệt vời !!!</div>
+        <div class="result-btn">
+            <button class="exit">Exit Quiz</button>
+            <button class="continue">Replay</button>
+        </div>
+    </div>
+    <script src="./data.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
